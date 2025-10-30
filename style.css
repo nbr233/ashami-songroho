@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@500&display=swap');
+
+body {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  background: #f3f4f6;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  color: #111;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #ccc;
+  gap: 20px;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+/* Header Title */
+h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+  flex: 1 1 100%;
+}
+
+/* Small Pasami Button */
+header button {
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 6px;
+  padding: 10px ;
+  font-size: 18px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.3s;
+}
+
+header button:hover {
+  background-color: #2563eb;
+}
+
+/* Popup Form */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  display: block;
+  opacity: 1;
+}
+
+.popup-content {
+  background: #fff;
+  width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  position: relative;
+  color: #111;
+}
+
+#closeForm {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* Form inputs */
+input, button {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Grid List */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Student Card */
+.student-card {
+  background: repeating-linear-gradient(
+    90deg,
+    #e5e7eb,
+    #e5e7eb 8px,
+    #f3f4f6 8px,
+    #f3f4f6 16px
+  );
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.student-card:hover {
+  transform: scale(1.03);
+  border-color: #3b82f6;
+}
+
+.student-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  border: 2px solid #ccc;
+}
+
+/* Name + Batch */
+.student-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.student-info h3, .student-info p {
+  margin: 2px 0;
+  font-weight: bold;
+}
+
+/* Pasami Number with Label */
+.ashami-num-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ashami-num-label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.ashami-num {
+  background: #111;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #111;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header button {
+    align-self: center;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .student-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .student-info {
+    margin: 10px 0;
+    align-items: center;
+  }
+  .ashami-num-container {
+    margin-top: 10px;
+  }
+}

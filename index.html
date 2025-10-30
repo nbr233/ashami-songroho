@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daffodil International University পাসামী সংগ্রহ চলছে 😆</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 Daffodil International University পাসামী সংগ্রহ চলছে 😆</h1>
+    <button id="openForm">পাসামী হোন 😜</button>
+  </header>
+
+  <!-- Popup Form -->
+  <div class="popup" id="popupForm">
+    <div class="popup-content">
+      <span id="closeForm">&times;</span>
+      <h2>নাম জমা দিন 😅</h2>
+      <form id="ashamiForm">
+        <input type="text" id="name" placeholder="নাম লিখো" required><br>
+        <input type="text" id="batch" placeholder="ব্যাচ লিখো" required><br>
+        <input type="file" id="photo" accept="image/*" required><br>
+        <button type="submit">জমা দাও 🚔</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- List Section -->
+  <div class="list" id="ashamiList">
+    <h2>আজকের ধরা পড়া পাসামীরা 😆👇</h2>
+    <div class="grid" id="gridList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
