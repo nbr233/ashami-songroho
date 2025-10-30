@@ -9,7 +9,6 @@ body {
   text-align: center;
 }
 
-/* Header */
 header {
   background-color: #fff;
   color: #111;
@@ -19,20 +18,16 @@ header {
   align-items: center;
   border-bottom: 3px solid #ccc;
   gap: 20px;
-  position: relative;
   flex-wrap: wrap;
 }
 
-/* Header Title */
 h1 {
   font-size: 32px;
   margin: 0;
   font-weight: bold;
-  text-align: center;
   flex: 1 1 100%;
 }
 
-/* Small Pasami Button */
 header button {
   background-color: #3b82f6;
   border: none;
@@ -48,7 +43,6 @@ header button:hover {
   background-color: #2563eb;
 }
 
-/* Popup Form */
 .popup {
   display: none;
   position: fixed;
@@ -86,7 +80,6 @@ header button:hover {
   font-size: 22px;
 }
 
-/* Form inputs */
 input, button {
   width: 90%;
   padding: 10px;
@@ -106,7 +99,6 @@ button:hover {
   background-color: #2563eb;
 }
 
-/* Grid List */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -114,7 +106,6 @@ button:hover {
   margin: 20px;
 }
 
-/* Responsive Grid */
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -127,7 +118,6 @@ button:hover {
   }
 }
 
-/* Student Card */
 .student-card {
   background: repeating-linear-gradient(
     90deg,
@@ -170,7 +160,6 @@ button:hover {
   border: 2px solid #ccc;
 }
 
-/* Name + Batch */
 .student-info {
   flex: 1;
   display: flex;
@@ -184,7 +173,6 @@ button:hover {
   font-weight: bold;
 }
 
-/* Pasami Number with Label */
 .ashami-num-container {
   display: flex;
   flex-direction: column;
@@ -211,7 +199,6 @@ button:hover {
   border: 2px solid #111;
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
